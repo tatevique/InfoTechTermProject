@@ -10,7 +10,6 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     
     <style>
-        /* Ensure responsiveness for all screen sizes */
         @media (max-width: 768px) {
             #sidebar {
                 background: #f8f9fa;
@@ -53,18 +52,27 @@
     <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav">
             <li class="nav-item active"><a class="nav-link" href="#">Home</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">Info Tech</a></li>
+
+            <!-- InfoTech Dropdown -->
             <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">Interests</a>
-                <div class="dropdown-menu">
-                    <a class="dropdown-item" href="#">Accessibility</a>
-                    <a class="dropdown-item" href="#">Eye Tracking for UX</a>
-                    <a class="dropdown-item" href="#">AI for HCI</a>
-                    <a class="dropdown-item" href="#">Phygital HCI</a>
-                    <a class="dropdown-item" href="#">HCI & Ethics</a>
-                    <a class="dropdown-item" href="#">Non-Tech HCI</a>
+                <a class="nav-link dropdown-toggle" href="#" id="infotechDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">InfoTech</a>
+                <div class="dropdown-menu" aria-labelledby="infotechDropdown">
+                    <a class="dropdown-item" href="#">Intro</a>
+                    <a class="dropdown-item" href="#">Open Source</a>
+                    <a class="dropdown-item" href="#">Tools</a>
                 </div>
             </li>
+
+            <!-- Interests Dropdown -->
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="interestsDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Interests</a>
+                <div class="dropdown-menu" aria-labelledby="interestsDropdown">
+                    <a class="dropdown-item" href="#">Video</a>
+                    <a class="dropdown-item" href="#">Screencast</a>
+                    <a class="dropdown-item" href="#">Resources</a>
+                </div>
+            </li>
+
             <li class="nav-item"><a class="nav-link" href="#">About</a></li>
         </ul>
     </div>
@@ -74,7 +82,7 @@
     <!-- Row 1: Full-width Slideshow -->
     <div class="row">
         <div class="col-12">
-            <div id="slideshow" class="carousel slide mt-4" >
+            <div id="slideshow" class="carousel slide mt-4">
                 <ul class="carousel-indicators">
                     <li data-target="#slideshow" data-slide-to="0" class="active"></li>
                     <li data-target="#slideshow" data-slide-to="1"></li>
@@ -212,29 +220,4 @@
                     <img src="eye tracking.jpeg" class="card-img-top rounded-circle mx-auto d-block" style="width: 100px; height: 100px;">
                 </a>
                 <div class="card-body">
-                    <a href="#captionEyeTracking" data-toggle="collapse" class="card-text">Eye Tracking</a>
-                    <div id="captionEyeTracking" class="collapse"><small class="text-muted">Studying user attention and interaction</small></div>
-                </div>
-            </div>
-        </div>
-        <div class="col-xl-2 col-lg-4 col-md-6 col-sm-12 d-flex align-items-stretch">
-            <div class="card h-100">
-                <a href="#captionAIHCI" data-toggle="collapse">
-                    <img src="ai for hci.jpeg" class="card-img-top rounded-circle mx-auto d-block" style="width: 100px; height: 100px;">
-                </a>
-                <div class="card-body">
-                    <a href="#captionAIHCI" data-toggle="collapse" class="card-text">AI for HCI</a>
-                    <div id="captionAIHCI" class="collapse"><small class="text-muted">Integrating artificial intelligence into UX</small></div>
-                </div>
-            </div>
-        </div>
-
-    <!-- Collapsible Content Sections -->
-    
-            </div>
-
-</div>
-
-</body>
-</html>
-</html>
+                    <a href="#captionEyeTracking"
