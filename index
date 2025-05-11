@@ -1,0 +1,241 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HCI Resources</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    
+    <style>
+        /* Ensure responsiveness for all screen sizes */
+        @media (max-width: 768px) {
+            #sidebar {
+                background: #f8f9fa;
+                padding: 15px;
+                border-left: 2px solid #ddd;
+                box-shadow: -2px 2px 5px rgba(0,0,0,0.1);
+            }
+        }
+
+        .carousel-inner img {
+            width: 100%;
+            height: auto;
+        }
+        
+        .rounded-circle {
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+        }
+        
+        .card {
+            text-align: center;
+            padding: 15px;
+        }
+        
+        .nav-tabs .nav-item {
+            flex: 1;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Navigation -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="#">HCI Resources</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+            <li class="nav-item active"><a class="nav-link" href="#">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Info Tech</a></li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">Interests</a>
+                <div class="dropdown-menu">
+                    <a class="dropdown-item" href="#">Accessibility</a>
+                    <a class="dropdown-item" href="#">Eye Tracking for UX</a>
+                    <a class="dropdown-item" href="#">AI for HCI</a>
+                    <a class="dropdown-item" href="#">Phygital HCI</a>
+                    <a class="dropdown-item" href="#">HCI & Ethics</a>
+                    <a class="dropdown-item" href="#">Non-Tech HCI</a>
+                </div>
+            </li>
+            <li class="nav-item"><a class="nav-link" href="#">About</a></li>
+        </ul>
+    </div>
+</nav>
+
+<div class="container-fluid">
+    <!-- Row 1: Full-width Slideshow -->
+    <div class="row">
+        <div class="col-12">
+            <div id="slideshow" class="carousel slide mt-4" >
+                <ul class="carousel-indicators">
+                    <li data-target="#slideshow" data-slide-to="0" class="active"></li>
+                    <li data-target="#slideshow" data-slide-to="1"></li>
+                    <li data-target="#slideshow" data-slide-to="2"></li>
+                    <li data-target="#slideshow" data-slide-to="3"></li>
+                </ul>
+                <div class="carousel-inner" style="max-height: 500px; overflow: hidden;">
+                    <div class="carousel-item active"><img src="image1.jpg" class="d-block w-100" style="object-fit: cover; max-height: 500px;"><div class="carousel-caption d-none d-md-block"><h5>New York Meetup</h5><p>HCI professionals gathering.</p></div> </div>
+                    <div class="carousel-item"><img src="image2.jpeg" class="d-block w-100" style="object-fit: cover; max-height: 500px;"><div class="carousel-caption d-none d-md-block"><h5>SF Meetup</h5><p>Industry discussions on HCI innovations.</p></div></div>
+                    <div class="carousel-item"><img src="image3.jpg" class="d-block w-100" style="object-fit: cover; max-height: 500px;"><div class="carousel-caption d-none d-md-block"><h5>Austin Meetup</h5><p>Exploring UX research methods.</p></div> </div>
+                    <div class="carousel-item"><img src="image4.jpeg" class="d-block w-100" style="object-fit: cover; max-height: 500px;"><div class="carousel-caption d-none d-md-block"><h5>Chicago Meetup</h5><p>Networking and academic insights.</p></div> </div>
+                </div>
+                <a class="carousel-control-prev" href="#slideshow" data-slide="prev"><span class="carousel-control-prev-icon"></span></a>
+                <a class="carousel-control-next" href="#slideshow" data-slide="next"><span class="carousel-control-next-icon"></span></a>
+            </div>
+        </div>
+    
+    <!-- Row 2: Main Content & Sidebar -->
+    <div class="row">
+        <div class="col-xl-10 col-lg-9 col-md-8 col-sm-12">
+            <div class="row">
+                <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
+                    <h3>People in HCI to Follow</h3>
+                    <ul class="nav nav-tabs">
+                        <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#ap1">AP 1</a></li>
+                        <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#ap2">AP 2</a></li>
+                        <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#ap3">AP 3</a></li>
+                    </ul>
+                    
+                    <div class="tab-content mt-2">
+                        <div id="ap1" class="tab-pane fade show active">
+                            <p>Notable HCI researcher 1 and a brief overview of their work.</p>
+                        </div>
+                        <div id="ap2" class="tab-pane fade">
+                            <p>Notable HCI researcher 2 and a brief overview of their work.</p>
+                            <table class="table table-bordered mt-2">
+                                <thead>
+                                    <tr>
+                                        <th>Name</th>
+                                        <th>Institution</th>
+                                        <th>Contribution</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Researcher A</td>
+                                        <td>Institution A</td>
+                                        <td>Notable Contribution A</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Researcher B</td>
+                                        <td>Institution B</td>
+                                        <td>Notable Contribution B</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Researcher C</td>
+                                        <td>Institution C</td>
+                                        <td>Notable Contribution C</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div id="ap3" class="tab-pane fade">
+                            <p>Notable HCI researcher 3 and a brief overview of their work.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
+                    <p>Famous academia researchers, their institutions, and their contribution to science.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-xl-2 col-lg-3 col-md-4 col-sm-12" id="sidebar">
+            <h4>🔥 Hottest HCI Research Topics</h4>
+            <ul>
+                <li>AI in UX Design</li>
+                <li>Phygital HCI</li>
+                <li>Neuroscience & HCI</li>
+                <li>Accessibility Innovations</li>
+                <li>Ethics in AI & HCI</li>
+                <li>Voice Interfaces & Chatbots</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Row 3: Cards with Circular Images -->
+    <div class="row text-center mt-4">
+        <div class="col-xl-2 col-lg-4 col-md-6 col-sm-12 d-flex align-items-stretch flex-column">
+            <div class="card h-100">
+                <a href="#captionPhygital" data-toggle="collapse">
+                    <img src="phygital_hci.jpeg" class="card-img-top rounded-circle mx-auto d-block" style="width: 100px; height: 100px;">
+                </a>
+                <div class="card-body">
+                    <a href="#captionPhygital" data-toggle="collapse" class="card-text">Phygital HCI</a>
+                    <div id="captionPhygital" class="collapse"><small class="text-muted" style="list-style-type: none;">Bridging digital and physical interactions</small></div>
+                </div>
+            </div>
+        </div>
+        <div class="col-xl-2 col-lg-4 col-md-6 col-sm-12 d-flex align-items-stretch">
+            <div class="card h-100">
+                <a href="#captionEthics" data-toggle="collapse">
+                    <img src="hci and ethics.jpeg" class="card-img-top rounded-circle mx-auto d-block" style="width: 100px; height: 100px;">
+                </a>
+                <div class="card-body">
+                    <a href="#captionEthics" data-toggle="collapse" class="card-text">HCI and Ethics</a>
+                    <div id="captionEthics" class="collapse"><small class="text-muted">Examining moral implications in HCI</small></div>
+                </div>
+            </div>
+        </div>
+        <div class="col-xl-2 col-lg-4 col-md-6 col-sm-12 d-flex align-items-stretch">
+            <div class="card h-100">
+                <a href="#captionNonTech" data-toggle="collapse">
+                    <img src="non tech hci.jpeg" class="card-img-top rounded-circle mx-auto d-block" style="width: 100px; height: 100px;">
+                </a>
+                <div class="card-body">
+                    <a href="#captionNonTech" data-toggle="collapse" class="card-text">Non-Tech HCI</a>
+                    <div id="captionNonTech" class="collapse"><small class="text-muted">HCI applications outside digital domains</small></div>
+                </div>
+            </div>
+        </div>
+        <div class="col-xl-2 col-lg-4 col-md-6 col-sm-12 d-flex align-items-stretch">
+            <div class="card h-100">
+                <a href="#captionAccessibility" data-toggle="collapse">
+                    <img src="accessibility.jpeg" class="card-img-top rounded-circle mx-auto d-block" style="width: 100px; height: 100px;">
+                </a>
+                <div class="card-body">
+                    <a href="#captionAccessibility" data-toggle="collapse" class="card-text">Accessibility</a>
+                    <div id="captionAccessibility" class="collapse"><small class="text-muted">Enhancing usability for all users</small></div>
+                </div>
+            </div>
+        </div>
+        <div class="col-xl-2 col-lg-4 col-md-6 col-sm-12 d-flex align-items-stretch">
+            <div class="card h-100">
+                <a href="#captionEyeTracking" data-toggle="collapse">
+                    <img src="eye tracking.jpeg" class="card-img-top rounded-circle mx-auto d-block" style="width: 100px; height: 100px;">
+                </a>
+                <div class="card-body">
+                    <a href="#captionEyeTracking" data-toggle="collapse" class="card-text">Eye Tracking</a>
+                    <div id="captionEyeTracking" class="collapse"><small class="text-muted">Studying user attention and interaction</small></div>
+                </div>
+            </div>
+        </div>
+        <div class="col-xl-2 col-lg-4 col-md-6 col-sm-12 d-flex align-items-stretch">
+            <div class="card h-100">
+                <a href="#captionAIHCI" data-toggle="collapse">
+                    <img src="ai for hci.jpeg" class="card-img-top rounded-circle mx-auto d-block" style="width: 100px; height: 100px;">
+                </a>
+                <div class="card-body">
+                    <a href="#captionAIHCI" data-toggle="collapse" class="card-text">AI for HCI</a>
+                    <div id="captionAIHCI" class="collapse"><small class="text-muted">Integrating artificial intelligence into UX</small></div>
+                </div>
+            </div>
+        </div>
+
+    <!-- Collapsible Content Sections -->
+    
+            </div>
+
+</div>
+
+</body>
+</html>
+</html>
