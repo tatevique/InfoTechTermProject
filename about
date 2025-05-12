@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>About</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <style>
+    body {
+      padding: 20px;
+    }
+    .navbar .active {
+      font-weight: bold;
+      text-decoration: underline;
+    }
+    .sidebar {
+      float: right;
+      width: 25%;
+      padding: 15px;
+      background-color: #f8f9fa;
+      border-left: 2px solid #ddd;
+    }
+    .main-column {
+      overflow: hidden;
+    }
+    .rollover-img {
+      width: 100%;
+      transition: 0.5s;
+    }
+    .rollover-img:hover {
+      transform: scale(1.05);
+      opacity: 0.8;
+    }
+    .video-wrapper {
+      position: relative;
+      padding-bottom: 56.25%;
+      height: 0;
+      overflow: hidden;
+      max-width: 100%;
+      background: #000;
+      margin-top: 20px;
+    }
+    .video-wrapper iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Navigation -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <a class="navbar-brand" href="index.html">HCI Resources</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+      <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+      <li class="nav-item"><a class="nav-link active" href="about.html">About</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- Tabs -->
+<div class="container mt-4">
+  <ul class="nav nav-tabs" role="tablist">
+    <li class="nav-item">
+      <a class="nav-link active" data-toggle="tab" href="#intro">Intro</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" data-toggle="tab" href="#rollovers">Image Rollovers</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" data-toggle="tab" href="#screencast">Screencast</a>
+    </li>
+  </ul>
+
+  <div class="tab-content mt-3">
+    <!-- Intro Tab -->
+    <div id="intro" class="container tab-pane active">
+      <div class="row">
+        <div class="col-md-9 main-column">
+          <h3>About Me</h3>
+          <p>I’m a student passionate about Human-Computer Interaction, user research, and design thinking. This website showcases my learning journey through hands-on assignments involving HTML, CSS, Bootstrap, JavaScript, PHP, and MySQL.</p>
+        </div>
+        <div class="col-md-3 sidebar">
+          <h5>Interests</h5>
+          <ul>
+            <li>UX Research</li>
+            <li>Digital Accessibility</li>
+            <li>Ethical AI</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Image Rollovers Tab -->
+    <div id="rollovers" class="container tab-pane fade">
+      <div class="row">
+        <div class="col-md-6">
+          <img src="profile-before.jpg" class="rollover-img" onmouseover="this.src='profile-after.jpg'" onmouseout="this.src='profile-before.jpg'" alt="Profile Rollover 1">
+        </div>
+        <div class="col-md-6">
+          <img src="project-before.jpg" class="rollover-img" onmouseover="this.src='project-after.jpg'" onmouseout="this.src='project-before.jpg'" alt="Project Rollover 2">
+        </div>
+      </div>
+    </div>
+
+    <!-- Screencast Tab -->
+    <div id="screencast" class="container tab-pane fade">
+      <h3>My Favorite UX Research Tool</h3>
+      <p>My favorite UX Research tool</p>
+      <div class="video-wrapper">
+        <iframe src="https://www.youtube.com/embed/hitwpq-P1No" title="UX Screencast" frameborder="0" allowfullscreen></iframe>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
