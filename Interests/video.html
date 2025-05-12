@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Video</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <style>
+    body {
+      padding: 20px;
+    }
+    .navbar .active {
+      font-weight: bold;
+      text-decoration: underline;
+    }
+    .sidebar {
+      float: right;
+      width: 25%;
+      padding: 15px;
+      background-color: #f8f9fa;
+      border-left: 2px solid #ddd;
+    }
+    .left-image {
+      float: left;
+      width: 25%;
+      margin-right: 20px;
+    }
+    .main-content {
+      overflow: hidden;
+    }
+    .video-wrapper {
+      position: relative;
+      padding-bottom: 56.25%;
+      height: 0;
+      overflow: hidden;
+      max-width: 100%;
+      background: #000;
+      margin-top: 20px;
+    }
+    .video-wrapper iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Navigation -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <a class="navbar-brand" href="index.html">HCI Resources</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+      <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="infotechdrop" data-toggle="dropdown">InfoTech</a>
+        <div class="dropdown-menu">
+          <a class="dropdown-item" href="infotech-intro.html">Intro</a>
+          <a class="dropdown-item" href="infotech-open-source.html">Open Source</a>
+          <a class="dropdown-item" href="infotech-tools.html">Tools</a>
+        </div>
+      </li>
+      <li class="nav-item dropdown active">
+        <a class="nav-link dropdown-toggle" href="#" id="interestsdrop" data-toggle="dropdown">Interests</a>
+        <div class="dropdown-menu">
+          <a class="dropdown-item" href="interests-intro.html">Intro</a>
+          <a class="dropdown-item" href="interests-resources.html">Resources</a>
+          <a class="dropdown-item active" href="interests-video.html">Video</a>
+          <a class="dropdown-item" href="#">Screencast</a>
+        </div>
+      </li>
+      <li class="nav-item"><a class="nav-link" href="#">About</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- Page Content -->
+<div class="container mt-4">
+  <img src="hci-video.jpg" alt="HCI Video" class="left-image">
+  <div class="sidebar">
+    <h5>Watch & Learn</h5>
+    <ul>
+      <li>Intro to UX</li>
+      <li>Design Ethics</li>
+      <li>Accessibility</li>
+    </ul>
+  </div>
+  <div class="main-content">
+    <h1>Don Norman: The term 'UX'</h1>
+    <p>This video explores key principles in HCI and UX, including usability heuristics and design thinking fundamentals. It’s a great primer for students and professionals entering the field.</p>
+
+    <div class="video-wrapper">
+      <iframe src="https://www.youtube.com/embed/9BdtGjoIN4E" title="What is UX Design?" frameborder="0" allowfullscreen></iframe>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
