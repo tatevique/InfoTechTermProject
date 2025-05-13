@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Info Tech – Open Source</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <style>
+        body {
+            padding: 20px;
+        }
+        .navbar .active {
+            font-weight: bold;
+            text-decoration: underline;
+        }
+        .form-button {
+            margin-top: 40px;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Navigation -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <a class="navbar-brand" href="index.html">HCI Resources</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+
+     <!-- Home -->
+      <li class="nav-item">
+        <a class="nav-link" href="index.html">Home</a>
+      </li>
+
+      <!-- InfoTech Dropdown -->
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="infotechdrop" data-toggle="dropdown">InfoTech</a>
+        <div class="dropdown-menu">
+          <a class="dropdown-item" href="infotech/intro.html">Intro</a>
+          <a class="dropdown-item" href="infotech/open-source.html">Open Source</a>
+          <a class="dropdown-item" href="infotech/tools.html">Tools</a>
+        </div>
+      </li>
+
+      <!-- Interests Dropdown -->
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="interestsdrop" data-toggle="dropdown">Interests</a>
+        <div class="dropdown-menu">
+          <a class="dropdown-item" href="interests/intro.html">Intro</a>
+          <a class="dropdown-item" href="interests/resources.html">Resources</a>
+          <a class="dropdown-item" href="interests/video.html">Video</a>
+          <a class="dropdown-item" href="interests/screencast.html">Screencast</a>
+        </div>
+      </li>
+
+      <!-- About -->
+      <li class="nav-item">
+        <a class="nav-link" href="about.html">About</a>
+      </li>
+        </ul>
+    </div>
+</nav>
+
+  <div class="container mt-4 mb-5">
+    <h2 class="mb-4">Feedback Form: GazeParser</h2>
+    <form action="mailto:youremail@example.com" method="POST" enctype="text/plain" onsubmit="return validate();">
+      <fieldset class="border p-3 mb-4">
+        <legend>Personal Information</legend>
+        <div class="form-group">
+          <label for="firstName">First Name:</label>
+          <input type="text" class="form-control" id="firstName" name="First Name" required />
+        </div>
+        <div class="form-group">
+          <label for="lastName">Last Name:</label>
+          <input type="text" class="form-control" id="lastName" name="Last Name" required />
+        </div>
+        <div class="form-group">
+          <label for="email">Email:</label>
+          <input type="email" class="form-control" id="email" name="Email" required />
+        </div>
+        <div class="form-group">
+          <label for="state">State (e.g., NY):</label>
+          <input type="text" class="form-control" id="state" name="State" pattern="[A-Z]{2}" title="Use 2 uppercase letters (e.g., NY)" required />
+        </div>
+        <div class="form-group">
+          <label for="zipcode">Zipcode:</label>
+          <input type="text" class="form-control" id="zipcode" name="Zipcode" pattern="\d{5}" title="Use 5-digit zipcode" required />
+        </div>
+      </fieldset>
+
+      <fieldset class="border p-3 mb-4">
+        <legend>Tool Feedback</legend>
+        <label>How are you using GazeParser?</label>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="Usage" id="student" value="Student" onclick="modifyDOM();" required />
+          <label class="form-check-label" for="student">Student</label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="Usage" id="researcher" value="Researcher" onclick="modifyDOM();" />
+          <label class="form-check-label" for="researcher">Researcher</label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="Usage" id="faculty" value="Faculty" onclick="modifyDOM();" />
+          <label class="form-check-label" for="faculty">Faculty</label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="Usage" id="developer" value="Developer" onclick="modifyDOM();" />
+          <label class="form-check-label" for="developer">Developer</label>
+        </div>
+        <div id="roleInfo" class="mt-2 text-muted"></div>
+
+        <label class="mt-4">What are your interests?</label><br />
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" name="Interests" value="UX Design" id="ux" />
+          <label class="form-check-label" for="ux">UX Design</label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" name="Interests" value="Accessibility" id="accessibility" />
+          <label class="form-check-label" for="accessibility">Accessibility</label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" name="Interests" value="Data Viz" id="viz" />
+          <label class="form-check-label" for="viz">Data Visualization</label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" name="Interests" value="Academic Research" id="research" />
+          <label class="form-check-label" for="research">Academic Research</label>
+        </div>
+      </fieldset>
+
+      <button type="submit" class="btn btn-primary">Submit</button>
+      <button type="reset" class="btn btn-secondary ml-2">Reset</button>
+    </form>
+  </div>
+
+  <!-- JavaScript for Validation and Dynamic Text -->
+  <script>
+    function checkboxesSelected() {
+      return document.querySelectorAll('input[type="checkbox"]:checked').length >= 2;
+    }
+
+    function validate() {
+      if (!checkboxesSelected()) {
+        alert("Please select at least two interests.");
+        return false;
+      }
+      return true;
+    }
+
+    function modifyDOM() {
+      const roleInfo = document.getElementById("roleInfo");
+      const selected = document.querySelector('input[name="Usage"]:checked');
+      const infoText = selected ? textToDisplay(selected.value) : "";
+      roleInfo.innerHTML = infoText;
+    }
+
+    function textToDisplay(role) {
+      if (role === "Student") return "As a student, your insights help us shape educational support.";
+      else if (role === "Researcher") return "Thanks for contributing to our research-driven development.";
+      else if (role === "Faculty") return "Faculty feedback is key to improving academic integration.";
+      else if (role === "Developer") return "We love hearing how developers adapt our tools!";
+      else return "";
+    }
+  </script>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
