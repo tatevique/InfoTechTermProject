@@ -53,32 +53,37 @@
 
 <!-- Navigation -->
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-  <a class="navbar-brand" href="index.html">HCI Resources</a>
+  <a class="navbar-brand" href="../index.html">HCI Resources</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
     <span class="navbar-toggler-icon"></span>
   </button>
   <div class="collapse navbar-collapse" id="navbarNav">
     <ul class="navbar-nav">
 
-      <!-- Home -->
-      <li class="nav-item">
-        <a class="nav-link" href="index.html">Home</a>
+      <li class="nav-item"><a class="nav-link" href="../index.html">Home</a></li>
+
+      <!-- InfoTech Dropdown (go up one level to access infotech/) -->
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="infotechdrop" data-toggle="dropdown">InfoTech</a>
+        <div class="dropdown-menu">
+          <a class="dropdown-item" href="../infotech/intro.html">Intro</a>
+          <a class="dropdown-item" href="../infotech/open-source.html">Open Source</a>
+          <a class="dropdown-item" href="../infotech/tools.html">Tools</a>
+        </div>
       </li>
-<!-- Inside a root-level page (e.g., index.html) -->
-<a class="nav-link" href="index.html">Home</a>
 
-<!-- InfoTech Dropdown -->
-<a class="dropdown-item" href="infotech/intro.html">Intro</a>
-<a class="dropdown-item" href="infotech/open-source.html">Open Source</a>
-<a class="dropdown-item" href="infotech/tools.html">Tools</a>
+      <!-- Interests Dropdown (no ../ — you're already inside the folder) -->
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="interestsdrop" data-toggle="dropdown">Interests</a>
+        <div class="dropdown-menu">
+          <a class="dropdown-item" href="intro.html">Intro</a>
+          <a class="dropdown-item" href="resources.html">Resources</a>
+          <a class="dropdown-item" href="video.html">Video</a>
+          <a class="dropdown-item" href="screencast.html">Screencast</a>
+        </div>
+      </li>
 
-<!-- Interests Dropdown -->
-<a class="dropdown-item" href="interest/intro.html">Intro</a>
-<a class="dropdown-item" href="interest/resources.html">Resources</a>
-<a class="dropdown-item" href="interest/video.html">Video</a>
-<a class="dropdown-item" href="interest/screencast.html">Screencast</a>
-
-<a class="nav-link" href="about.html">About</a>
+      <li class="nav-item"><a class="nav-link" href="../about.html">About</a></li>
 
     </ul>
   </div>
